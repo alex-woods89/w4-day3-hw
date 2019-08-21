@@ -16,22 +16,23 @@
   />
 
   <label for="select-house">Select a House:</label>
-  <select name="house_id" id="pizza-selection">
+  <select name="house_id" id="house-selection">
+    <option hidden value="default">Select A House</option>
     <option
-    value="1"
-    <%= "selected" if @student.house_id == "1" %>
+    value="Gryffindor"
+    <%= "selected" if @student.house.name == "gryffindor" %>
     >Gryffindor</option>
     <option
-    value="2"
-    <%= "selected" if @student.house_id == "2" %>
+    value="Hufflepuff"
+    <%= "selected" if @student.house.name == "hufflepuff" %>
     >Hufflepuff</option>
     <option
-    value="3"
-    <%= "selected" if @student.house_id == "3" %>
+    value="Ravenclaw"
+    <%= "selected" if @student.house.name == "ravenclaw" %>
     >Ravenclaw</option>
     <option
-    value="4"
-    <%= "selected" if @student.house_id == "4" %>
+    value="Slytherin"
+    <%= "selected" if @student.house.name == "slytherin" %>
     >Slytherin</option>
   </select>
 
